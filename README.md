@@ -13,7 +13,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - Went back and forth on how I can utilize searching with filtration with the least amount API calls as possible and decided with the following:
 - Initial page SSR (server side rendering) loaded with filters to show Next.js capabilities
-- CSR (client side rendering) for character list with a debounce to prevent excessive API calls
+- CSR (client side rendering) for character search with a debounce to prevent excessive API calls
 - Didn't have enough time to implement filtering but skeleton is added.
   - The intention is to have a multi-level dropdown to filter for films, species and planets.
   - Grab characters within selected filter
