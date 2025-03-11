@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Modal from './Modal';
 import { useState } from 'react';
+import { Person } from '../types';
 
 function getCharacterImage(name: string) {
   // Simple hash function to get a consistent number for each name
@@ -12,7 +13,7 @@ function getCharacterImage(name: string) {
   return `https://picsum.photos/seed/${imageId}/600/400`; // Random image based on hash
 }
 
-export default function Card({ person }) {
+export default function Card({ person }: { person: Person }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

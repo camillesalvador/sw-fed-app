@@ -1,9 +1,16 @@
 'use client';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Person, Planet } from '../types';
 
-export default function Modal({ isOpen, onClose, character }) {
-  const [homeworld, setHomeworld] = useState(null);
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  character: Person;
+}
+
+export default function Modal({ isOpen, onClose, character }: ModalProps) {
+  const [homeworld, setHomeworld] = useState<Planet | null>(null);
 
   useEffect(() => {
     if (character.homeworld) {
