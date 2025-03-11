@@ -37,7 +37,7 @@ export default function Filter({ filters }: FilterProps) {
           value={selectedFilter}
           onChange={handleFilterChange}
         >
-          <option selected>Choose a filter</option>
+          <option value="">Choose a filter</option>
           {Object.keys(filters).map((filter: any) => (
             <option key={filter}>{filter}</option>
           ))}
@@ -51,7 +51,7 @@ export default function Filter({ filters }: FilterProps) {
           value={selectedSubFilter}
           onChange={(e) => setSelectedSubFilter(e.target.value)}
         >
-          <option selected>Choose {selectedFilter}</option>
+          <option value="">Choose {selectedFilter}</option>
           {subFilter.map((subFilter: any) => optionComponent(subFilter))}
         </select>
       </div>

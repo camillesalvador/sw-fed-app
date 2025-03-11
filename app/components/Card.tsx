@@ -19,7 +19,7 @@ export default function Card({ person }: { person: Person }) {
   return (
     <>
       <button
-        className="text-gray-700 dark:text-gray-400 hover:text-white basis-1/3 max-w-sm rounded-lg shadow-sm bg-[#1d1e1f] cursor-pointer"
+        className="text-gray-700 dark:text-gray-400 hover:text-white max-w-sm rounded-lg shadow-sm bg-[#1d1e1f] cursor-pointer"
         onClick={() => setIsOpen(true)}
       >
         <Image
