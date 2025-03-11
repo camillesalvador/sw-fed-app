@@ -26,9 +26,9 @@ export async function GET() {
 
     return NextResponse.json({
       // people,
-      planets,
-      films,
-      species,
+      planets: planets,
+      films: films,
+      species: species,
     });
   } catch (error) {
     return NextResponse.json(

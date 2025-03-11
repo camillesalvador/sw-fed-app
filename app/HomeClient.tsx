@@ -6,13 +6,15 @@ import Image from 'next/image';
 import Card from './components/Card';
 import Pagination from './components/Pagination';
 import SearchBar from './components/SearchBar';
+import { Person } from './types';
+import Filter from './components/Filter';
 
 interface HomeClientProps {
   filters: { planets: object; films: object; species: object };
 }
 
 export default function HomeClient({ filters }: HomeClientProps) {
-  const [people, setPeople] = useState([]);
+  const [people, setPeople] = useState<Person[]>([]);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
   const [total, setTotal] = useState(0);
@@ -28,6 +30,7 @@ export default function HomeClient({ filters }: HomeClientProps) {
 
   useEffect(() => {
     fetchPeople();
+    console.log(filters);
   }, [page, search]);
 
   return (
@@ -43,7 +46,10 @@ export default function HomeClient({ filters }: HomeClientProps) {
         />
       </header>
       <div className="max-w-[104rem] gap-8 flex flex-col items-center">
-        <SearchBar onSearch={setSearch} />
+        <div className="flex justify-between w-full">
+          <Filter filters={filters} />
+          <SearchBar onSearch={setSearch} />
+        </div>
         <div className="columns-3 flex flex-wrap justify-center px-12 gap-4">
           {people.map((person) => (
             <Card key={person.name} person={person} />

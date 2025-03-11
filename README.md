@@ -3,13 +3,8 @@
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -18,3 +13,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - Initial page SSR (server side rendering) loaded with filters to show Next.js capabilities
 - CSR (client side rendering) for character list with a debounce to prevent excessive API calls
+- Didn't have enough time to implement filtering but skeleton is added.
+  - The intention is to have a multi-level dropdown to filter for films, species and planets.
+  - Grab characters within selected filter
+  - Search would have been CSR with no additional API call to /people
+- add loading in between calls
+
+### If I had more time,
+
+- add dark mode
+- improve ui
+- add playwright tests
+- complete filter and search combined
+
+## Things noticed
+
+- Some characters (eg. Luke Skywalker) not returning species (high chance that those with missing are all human. need to check)
