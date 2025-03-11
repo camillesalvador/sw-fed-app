@@ -25,6 +25,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - improve ui
 - add playwright tests
 - complete filter and search combined
+- deploy to GH pages
 
 ## Things noticed
 
