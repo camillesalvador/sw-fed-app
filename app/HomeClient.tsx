@@ -50,7 +50,7 @@ export default function HomeClient({ filters }: HomeClientProps) {
           <Filter filters={filters} />
           <SearchBar onSearch={setSearch} />
         </div>
-        <div className="columns-3 flex flex-wrap justify-center px-12 gap-4">
+        <div className="flex flex-wrap justify-center px-12 gap-4">
           {people.map((person) => (
             <Card key={person.name} person={person} />
           ))}
