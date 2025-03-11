@@ -11,7 +11,7 @@ export default function SearchBar({ onSearch }) {
 
   return (
     <form class="flex items-center max-w-sm mx-auto">
-      <label for="simple-search" class="sr-only">
+      <label htmlFor="simple-search" class="sr-only">
         Search
       </label>
       <div class="relative w-full">
