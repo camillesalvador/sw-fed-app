@@ -39,7 +39,7 @@ export default function HomeClient({ filters }: HomeClientProps) {
         <Image
           className="light:invert"
           src="/star-wars-logo.png"
-          alt="Next.js logo"
+          alt="Star Wars logo."
           width={180}
           height={38}
           priority
